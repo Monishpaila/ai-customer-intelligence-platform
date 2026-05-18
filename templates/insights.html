@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI Insights
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+    <!-- STARS BACKGROUND -->
+
+    <!-- STARS -->
+
+    <div class="stars stars1"></div>
+
+    <div class="stars stars2"></div>
+
+    <div class="stars stars3"></div>
+
+    <div class="shooting-stars">
+
+        <span></span>
+
+        <span></span>
+
+    </div>
+
+    <!-- Background Glow -->
+
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+
+    <!-- FLOATING NAVBAR -->
+
+    <nav class="insights-navbar">
+
+    <!-- LEFT FLOATING LOGO -->
+
+    <div class="floating-logo">
+
+        <i data-lucide="brain-circuit"></i>
+
+        <span>
+            AI Customer Intelligence
+        </span>
+
+    </div>
+
+    <!-- RIGHT FLOATING MENU -->
+
+    <div class="floating-menu">
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="#hero">AI System</a></li>
+
+            <li><a href="#capabilities">AI Capabilities</a></li>
+
+            <li><a href="#analytics">AI Analytics</a></li>
+
+            <li><a href="#workflow">AI Workflow</a></li>
+
+            <li><a href="#tech">Tech Stack</a></li>
+
+            <li><a href="#future">Future Scope</a></li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+    <!-- HERO -->
+
+    <section class="insights-hero" id="hero">
+
+        <div class="ai-badge">
+
+            <i data-lucide="sparkles"></i>
+
+            <span>
+                Advanced AI Intelligence System
+            </span>
+
+        </div>
+
+        <h1>
+
+            Inside The AI Intelligence Engine
+
+        </h1>
+
+        <p>
+
+            Explore how advanced machine learning transforms customer behavior
+            into predictive business intelligence and intelligent decision systems.
+
+        </p>
+
+    </section>
+    <!-- KPI INTELLIGENCE -->
+
+    <section class="insight-kpis">
+
+        <!-- CARD 1 -->
+
+        <div class="kpi-box">
+
+            <div class="kpi-icon">
+
+                <i data-lucide="users"></i>
+
+            </div>
+
+            <h3>
+                Total Customers
+            </h3>
+
+            <h2>
+                {{ total_customers }}
+            </h2>
+
+            <p>
+                AI-analyzed customer profiles
+            </p>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="kpi-box">
+
+            <div class="kpi-icon">
+
+                <i data-lucide="wallet"></i>
+
+            </div>
+
+            <h3>
+                Revenue Intelligence
+            </h3>
+
+            <h2>
+                ${{ total_revenue }}
+            </h2>
+
+            <p>
+                Processed customer spending data
+            </p>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="kpi-box">
+
+            <div class="kpi-icon">
+
+                <i data-lucide="activity"></i>
+
+            </div>
+
+            <h3>
+                Churn Detection
+            </h3>
+
+            <h2>
+                {{ churn_rate }}%
+            </h2>
+
+            <p>
+                AI-powered churn probability analysis
+            </p>
+
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="kpi-box">
+
+            <div class="kpi-icon">
+
+                <i data-lucide="brain-circuit"></i>
+
+            </div>
+
+            <h3>
+                Avg Spending
+            </h3>
+
+            <h2>
+                ${{ avg_spending }}
+            </h2>
+
+            <p>
+                Intelligent spending behavior insights
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- AI CAPABILITIES -->
+
+    <section class="ai-capabilities" id="capabilities">
+
+        <!-- TITLE -->
+
+        <div class="section-heading">
+
+            <span>
+                AI Capabilities
+            </span>
+
+            <h2>
+
+                Advanced Intelligence Systems
+
+            </h2>
+
+            <p>
+
+                Explore the core machine learning capabilities powering the AI Customer Intelligence Platform.
+
+            </p>
+
+        </div>
+
+        <!-- GRID -->
+
+        <div class="capabilities-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="capability-card">
+
+                <i data-lucide="pie-chart"></i>
+
+                <h3>
+                    Customer Segmentation
+                </h3>
+
+                <p>
+
+                    AI-driven behavioral clustering identifies high-value customer groups and engagement patterns.
+
+                </p>
+
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="capability-card">
+
+                <i data-lucide="shield-alert"></i>
+
+                <h3>
+                    Churn Prediction
+                </h3>
+
+                <p>
+
+                    Predictive analytics detects customer disengagement risks before churn occurs.
+
+                </p>
+
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="capability-card">
+
+                <i data-lucide="trending-up"></i>
+
+                <h3>
+                    Spending Forecasting
+                </h3>
+
+                <p>
+
+                    Machine learning models estimate future customer spending behavior and value potential.
+
+                </p>
+
+            </div>
+
+            <!-- CARD 4 -->
+
+            <div class="capability-card">
+
+                <i data-lucide="sparkles"></i>
+
+                <h3>
+                    AI Decision Engine
+                </h3>
+
+                <p>
+
+                    Intelligent recommendation systems generate actionable business insights automatically.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ANALYTICS VISUALIZATION -->
+
+    <section class="analytics-showcase" id="analytics">
+
+        <!-- TITLE -->
+
+        <div class="section-heading">
+
+            <span>
+                AI Analytics
+            </span>
+
+            <h2>
+
+                Intelligence Visualization Center
+
+            </h2>
+
+            <p>
+
+                Advanced machine learning analytics transforming raw customer behavior into actionable business intelligence.
+
+            </p>
+
+        </div>
+
+        <!-- GRID -->
+
+        <div class="analytics-grid">
+
+            <!-- CHART 1 -->
+
+            <div class="analytics-card">
+
+                <div class="chart-top">
+
+                    <div>
+
+                        <h3>
+                            Customer Segmentation
+                        </h3>
+
+                        <p>
+                            Behavioral clustering and spending intelligence
+                        </p>
+
+                    </div>
+
+                    <i data-lucide="pie-chart"></i>
+
+                </div>
+
+                <img
+                    src="{{ url_for('static', filename='images/segmentation.png') }}"
+                    alt="Segmentation Chart"
+                >
+
+            </div>
+
+            <!-- CHART 2 -->
+
+            <div class="analytics-card">
+
+                <div class="chart-top">
+
+                    <div>
+
+                        <h3>
+                            Churn Risk Analysis
+                        </h3>
+
+                        <p>
+                            AI-powered churn behavior detection
+                        </p>
+
+                    </div>
+
+                    <i data-lucide="activity"></i>
+
+                </div>
+
+                <img
+                    src="{{ url_for('static', filename='images/churn.png') }}"
+                    alt="Churn Chart"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- AI WORKFLOW -->
+
+    <section class="ai-workflow" id="workflow">
+
+        <!-- TITLE -->
+
+        <div class="section-heading">
+
+            <span>
+                AI Workflow
+            </span>
+
+            <h2>
+
+                How The Intelligence Engine Works
+
+            </h2>
+
+            <p>
+
+                The platform transforms raw customer behavior into predictive intelligence through a multi-stage AI processing pipeline.
+
+            </p>
+
+        </div>
+
+        <!-- TIMELINE -->
+
+        <div class="workflow-timeline">
+
+            <!-- STEP 1 -->
+
+            <div class="workflow-step">
+
+                <div class="step-dot"></div>
+
+                <div class="workflow-card">
+
+                    <i data-lucide="database"></i>
+
+                    <h3>
+                        Data Collection
+                    </h3>
+
+                    <p>
+
+                        Customer interactions, order history, purchase behavior, and engagement metrics are processed securely.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- STEP 2 -->
+
+            <div class="workflow-step">
+
+                <div class="step-dot"></div>
+
+                    <div class="workflow-card">
+
+                        <i data-lucide="scan-search"></i>
+
+                        <h3>
+                            Behavior Analysis
+                        </h3>
+
+                        <p>
+
+                            AI systems analyze behavioral patterns, spending trends, and customer activity signals.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STEP 3 -->
+
+                <div class="workflow-step">
+
+                    <div class="step-dot"></div>
+
+                    <div class="workflow-card">
+
+                        <i data-lucide="brain-circuit"></i>
+
+                    <h3>
+                        Prediction Engine
+                    </h3>
+
+                    <p>
+
+                        Machine learning models generate churn probability, spending forecasts, and segmentation intelligence.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- STEP 4 -->
+
+            <div class="workflow-step">
+
+                <div class="step-dot"></div>
+
+                <div class="workflow-card">
+
+                    <i data-lucide="sparkles"></i>
+
+                    <h3>
+                        Business Intelligence
+                    </h3>
+
+                    <p>
+
+                        The platform delivers actionable AI insights for retention, growth, and customer optimization strategies.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- TECH STACK -->
+
+    <section class="tech-stack" id="tech">
+
+        <div class="section-heading">
+
+            <span>
+                Technology Stack
+            </span>
+
+            <h2>
+
+                Powered By Modern AI Technologies
+
+            </h2>
+
+            <p>
+
+                Built using advanced machine learning frameworks, analytics systems, and intelligent data processing technologies.
+
+            </p>
+
+        </div>
+
+        <!-- TECH PILLS -->
+
+        <div class="tech-pills">
+
+            <div class="tech-pill">Python</div>
+
+            <div class="tech-pill">Flask</div>
+
+            <div class="tech-pill">Scikit-learn</div>
+
+            <div class="tech-pill">Pandas</div>
+
+            <div class="tech-pill">NumPy</div>
+
+            <div class="tech-pill">Machine Learning</div>
+
+            <div class="tech-pill">Predictive Analytics</div>
+
+            <div class="tech-pill">Matplotlib</div>
+
+            <div class="tech-pill">AI Intelligence</div>
+
+            <div class="tech-pill">Data Visualization</div>
+
+        </div>
+
+    </section>
+
+    <!-- FUTURE SCOPE -->
+
+    <section class="future-scope" id="future">
+
+        <!-- TITLE -->
+
+        <div class="section-heading">
+
+            <span>
+                Future Scope
+            </span>
+
+            <h2>
+
+                Expanding The Future Of AI Intelligence
+
+            </h2>
+
+            <p>
+
+                The platform is designed to evolve into a next-generation enterprise intelligence ecosystem powered by advanced AI systems.
+
+            </p>
+
+        </div>
+
+        <!-- GRID -->
+
+        <div class="future-grid">
+
+           <!-- CARD 1 -->
+
+            <div class="future-card">
+
+                <i data-lucide="cpu"></i>
+
+                <h3>
+                    Deep Learning Systems
+                </h3>
+
+                <p>
+
+                    Integration of advanced neural networks for highly intelligent behavioral prediction models.
+
+                </p>
+
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="future-card">
+
+                <i data-lucide="radio"></i>
+
+               <h3>
+                    Real-Time Analytics
+                </h3>
+
+                <p>
+
+                    Live customer intelligence processing with real-time AI prediction capabilities.
+
+                </p>
+
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="future-card">
+
+                <i data-lucide="network"></i>
+
+                <h3>
+                    CRM Integration
+                </h3>
+
+             <p>
+
+                 Enterprise-level connectivity with customer relationship management platforms.
+
+             </p>
+
+            </div>
+
+            <!-- CARD 4 -->
+
+            <div class="future-card">
+
+                <i data-lucide="bot"></i>
+
+                <h3>
+                    AI Recommendation Engine
+                </h3>
+
+                <p>
+
+                    Intelligent automated recommendations for retention, marketing, and customer engagement.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>

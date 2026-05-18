@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Customer Intelligence Platform</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    
+    
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+    <!-- STARS BACKGROUND -->
+
+    <!-- STARS -->
+
+    <div class="stars stars1"></div>
+
+    <div class="stars stars2"></div>
+
+    <div class="stars stars3"></div>
+
+    <div class="shooting-stars">
+
+        <span></span>
+
+        <span></span>
+
+    </div>
+
+    <!-- Background Glow -->
+
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <!-- LEFT FLOATING LOGO -->
+
+        <div class="floating-logo">
+
+            <i data-lucide="brain-circuit"></i>
+
+            <span>
+                AI Customer Intelligence
+            </span>
+
+        </div>
+
+        <!-- RIGHT FLOATING MENU -->
+
+        <div class="floating-menu">
+
+            <ul>
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#insights-preview">AI Insights</a></li>
+
+                <li><a href="#predict">Predictions</a></li>
+
+                <li><a href="#about">About</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="tag">
+
+            <i data-lucide="sparkles"></i>
+
+            <span>
+                AI • Machine Learning • Business Intelligence
+            </span>
+
+        </div>
+
+        <h1>
+            AI-Powered Customer Intelligence Platform
+        </h1>
+
+        <p>
+            Advanced analytics system for customer segmentation,
+            churn prediction, and spending intelligence.
+        </p>
+
+        <a href="#analytics">
+
+            <button class="hero-btn">
+            Explore Analytics
+            </button>
+
+        </a>
+
+    </section>
+
+
+    <!-- KPI Cards -->
+
+    <section class="cards">
+
+        <div class="card">
+            <h2>{{ total_customers }}</h2>
+            <p>Total Customers</p>
+        </div>
+
+        <div class="card">
+            <h2>${{ total_revenue }}</h2>
+            <p>Total Revenue</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ churn_rate }}%</h2>
+            <p>Churn Accuracy</p>
+        </div>
+
+        <div class="card">
+            <h2>${{ avg_spending }}</h2>
+            <p>Average Spending</p>
+        </div>
+
+    </section>
+
+    <!-- AI INSIGHTS TEASER -->
+
+    <section class="insights-preview" id="insights-preview">
+
+        <!-- LEFT -->
+
+        <div class="liquid-ai">
+
+            <!-- GLOW BLOBS -->
+
+            <div class="blob blob1"></div>
+
+            <div class="blob blob2"></div>
+
+            <div class="blob blob3"></div>
+
+            <!-- CENTER ORB -->
+
+            <div class="ai-orb">
+
+            <div class="orb-ring"></div>
+
+                <span>
+                    AI
+                </span>
+
+            </div>
+
+            <!-- FLOATING PARTICLES -->
+
+            <div class="float-dot d1"></div>
+            <div class="float-dot d2"></div>
+            <div class="float-dot d3"></div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="preview-content">
+
+            <div class="preview-badge">
+
+                <i data-lucide="sparkles"></i>
+
+                <span>
+                    AI Intelligence Preview
+             </span>
+
+            </div>
+
+            <h2>
+
+                Explore The Intelligence Behind The Predictions
+
+            </h2>
+
+            <p>
+
+                Dive deeper into advanced customer analytics,
+                machine learning intelligence, behavioral segmentation,
+                predictive modeling, and AI-driven business insights.
+
+            </p>
+
+            <a
+                href="/insights"
+                class="preview-btn"
+            >
+
+                Know More
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- AI Prediction Section -->
+
+    <section class="ai-section" id="predict">
+
+        <div class="ai-top">
+
+            <div class="ai-badge">
+
+                <i data-lucide="sparkles"></i>
+
+                <span>
+                    AI Customer Intelligence Engine
+                </span>
+
+            </div>
+
+            <h1>
+                Generate Customer Intelligence
+            </h1>
+
+            <p>
+                Analyze customer behavior, predict churn probability,
+                and generate AI-powered business insights instantly.
+            </p>
+
+        </div>
+
+
+        <!-- AI PANEL -->
+
+        <div class="ai-panel">
+
+            <form
+                action="/predict"
+                method="POST"
+                class="ai-form"
+            >
+
+                <div class="ai-grid">
+
+                    <!-- First Order -->
+
+                    <div class="ai-input-card">
+
+                        <label>
+
+                            <i data-lucide="calendar-days"></i>
+
+                            When did the customer first purchase?
+
+                        </label>
+
+                        <input
+                            type="date"
+                            name="first_order"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Last Order -->
+
+                    <div class="ai-input-card">
+
+                        <label>
+
+                            <i data-lucide="calendar-clock"></i>
+
+                            When was the customer's latest order?
+
+                        </label>
+
+                        <input
+                            type="date"
+                            name="last_order"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Orders -->
+
+                    <div class="ai-input-card">
+
+                        <label>
+
+                            <i data-lucide="shopping-cart"></i>
+
+                            Total number of orders?
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="frequency"
+                            placeholder="Enter total orders"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Products -->
+
+                    <div class="ai-input-card">
+
+                        <label>
+
+                            <i data-lucide="package"></i>
+
+                            How many unique products were purchased?
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="product_diversity"
+                            placeholder="Enter unique products"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Quantity -->
+
+                    <div class="ai-input-card full-width">
+
+                        <label>
+
+                            <i data-lucide="boxes"></i>
+
+                            Total quantity purchased till now?
+
+                        </label>
+
+                        <input
+                            type="number"
+                            name="total_quantity"
+                            placeholder="Enter quantity"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    id="analyzeBtn"
+                    class="ai-btn"
+                >
+
+                    <span id="btnText">
+
+                        Analyze Customer
+
+                    </span>
+
+                    <span
+                        id="loadingSpinner"
+                        class="spinner"
+                    ></span>
+
+                </button>
+
+            </form>
+
+
+            <!-- RESULT -->
+
+            {% if churn_result %}
+
+            <div class="ai-result-card" id="results"></div>
+
+                <h2>
+
+                    <i data-lucide="brain-circuit"></i>
+
+                    AI Prediction Results
+
+                </h2>
+
+                <div class="modern-result {{ customer_segment }}">
+
+                <!-- STATUS -->
+
+                    <div class="result-status">
+
+                        <div class="status-icon">
+
+                            <i data-lucide="shield-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                {{ churn_result }}
+                            </h3>
+
+                            <span>
+                                AI-generated customer intelligence report
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- METRICS -->
+
+                    <div class="result-grid">
+
+                        <!-- Spending -->
+
+                        <div class="metric-card">
+
+                            <span>
+                               Estimated Spending
+                            </span>
+
+                            <h2>
+
+                                ${{ predicted_spending }}
+
+                            </h2>
+
+                        </div>
+
+                        <!-- Churn -->
+
+                        <div class="metric-card">
+
+                            <span>
+                                Churn Probability
+                            </span>
+
+                            <h2>
+
+                                {{ churn_probability }}%
+
+                            </h2>
+
+                        </div>
+
+                        <!-- Segment -->
+
+                        <div class="metric-card">
+
+                            <span>
+                                Customer Segment
+                        </span>
+
+                        <h2>
+
+                            {{ customer_segment }}
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <!-- AI INSIGHT -->
+
+                <div class="insight-box">
+
+                    <i data-lucide="sparkles"></i>
+
+                        <p>
+
+                            {{ insight }}
+
+                        </p>
+
+                </div>
+
+            </div>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="about">
+
+    <p class="footer-name">
+        Designed & Developed by
+        <span>Monish Paila</span>
+    </p>
+
+    <div class="footer-socials">
+
+        <a href="https://www.linkedin.com/in/pailamonish/"
+           target="_blank">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            @pailamonish
+
+        </a>
+
+        <a href="https://github.com/Monishpaila"
+           target="_blank">
+
+            <i class="fa-brands fa-github"></i>
+
+            @Monishpaila
+
+        </a>
+
+        <a href="mailto:monishpaila2006@gmail.com">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            monishpaila2006@gmail.com
+
+        </a>
+
+        <a href="https://instagram.com/offx.monish"
+           target="_blank">
+
+            <i class="fa-brands fa-instagram"></i>
+
+            @offx.monish
+
+        </a>
+
+    </div>
+
+</footer>
+
+    
+    <script>
+
+    const form = document.querySelector("form");
+
+    const button = document.getElementById(
+        "analyzeBtn"
+    );
+
+    const spinner = document.getElementById(
+        "loadingSpinner"
+    );
+
+    const btnText = document.getElementById(
+        "btnText"
+    );
+
+    const loadingText = document.getElementById(
+        "loadingText"
+    );
+
+    form.addEventListener("submit", () => {
+
+        spinner.style.display = "inline-block";
+
+        loadingText.style.display = "block";
+
+        btnText.innerText = "Analyzing...";
+
+        button.disabled = true;
+    });
+
+    </script>
+    {% if scroll_to_results %}
+
+    <script>
+
+        window.onload = function(){
+
+            document
+                .getElementById("results")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        }
+
+    </script>
+
+    
+
+    {% endif %}
+    
+    <script>
+
+    window.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+    });
+
+</script>
+</body>
+
+</html>
