@@ -18,7 +18,7 @@ churn_model = joblib.load("churn_model.pkl")
 
 spending_model = joblib.load("spending_model.pkl")
 
-df = pd.read_csv(r"C:/Users/monis/OneDrive/Desktop/AI Customer Intelligence Platform/final_customer_data.csv")
+df = pd.read_csv("final_customer_data.csv")
 
 # =========================
 # CREATE APP
